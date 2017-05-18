@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.emma.chat">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="微信"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".registActivity" />
+        <activity android:name=".fragment.Fragment_Friends" />
+        <activity android:name=".fragment.Fragment_Msg" />
+        <activity android:name=".fragment.Fragment_Profile" />
+        <activity android:name=".fragment.Fragment_Dicover" />
+        <activity
+            android:name=".ChatActivity"
+            android:label="@string/title_activity_chat"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".MyCodeActivity" />
+        <activity android:name=".AlbumActivity" />
+        <activity android:name=".FriendMsgActivity"></activity>
+    </application>
+
+</manifest>

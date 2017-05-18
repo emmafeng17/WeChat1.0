@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/layout_addfriend"
+        style="@style/MMListItem"
+        android:layout_height="55.0dip"
+        android:background="@drawable/setting_item_selector"
+        android:paddingLeft="15dip">
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:src="@drawable/icon_addfriend" />
+        <TextView
+            style="@style/MMFontTitleInList"
+            android:textColor="@color/black"
+            android:text="新朋友"
+            android:layout_marginLeft="13dp"
+            android:singleLine="true" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black2" />
+
+    <LinearLayout
+        android:id="@+id/layout_group"
+        style="@style/MMListItem"
+        android:layout_height="55.0dip"
+        android:background="@drawable/setting_item_selector"
+        android:paddingLeft="15dip">
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:src="@drawable/icon_qunliao" />
+        <TextView
+            style="@style/MMFontTitleInList"
+            android:textColor="@color/black"
+            android:text="群聊"
+            android:layout_marginLeft="10dp"
+            android:singleLine="true" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black2" />
+
+    <LinearLayout
+        android:id="@+id/layout_public"
+        style="@style/MMListItem"
+        android:layout_height="55.0dip"
+        android:background="@drawable/setting_item_selector"
+        android:paddingLeft="15dip">
+        <ImageView
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:src="@drawable/icon_public" />
+        <TextView
+            style="@style/MMFontTitleInList"
+            android:textColor="@color/black"
+            android:text="公众号"
+            android:layout_marginLeft="10dp"
+            android:singleLine="true" />
+    </LinearLayout>
+    <TextView
+        android:text="    朋友列表"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00000000" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:background="@color/windows_color">
+            <ListView
+                android:id="@+id/lvContact"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scrollbars="none"
+                android:dividerHeight="0dp"
+                android:divider="#00000000"
+                android:listSelector="#00000000"
+                android:cacheColorHint="#00000000" />
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>

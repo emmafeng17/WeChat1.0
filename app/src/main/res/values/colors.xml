@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--窗体颜色 -->
+    <color name="windows_color">#F5F5F5</color>
+    <!-- 白色 -->
+    <color name="white">#ffffff</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bar_color">#232325</color>
+    <color name="black">#ff000000</color>
+    <color name="black1">#7A7E83</color>
+    <color name="black2">#ffeeeeee</color>
+    <color name="blackk">#ffe6e6e6</color>
+    <color name="greeny">#ff11aca6</color>
+    <color name="gray">#ff808080</color>
+    <color name="blue">#ff3300ff</color>
+    <color name="blue1">#ff00a4e8</color>
+</resources>
