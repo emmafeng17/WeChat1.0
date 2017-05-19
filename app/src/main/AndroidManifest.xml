@@ -28,7 +28,8 @@
         <activity android:name=".SearchActivity" />
         <activity android:name=".MyCodeActivity" />
         <activity android:name=".AlbumActivity" />
-        <activity android:name=".FriendMsgActivity"></activity>
+        <activity android:name=".FriendMsgActivity" />
+        <activity android:name=".ShareActivity"></activity>
     </application>
 
 </manifest>

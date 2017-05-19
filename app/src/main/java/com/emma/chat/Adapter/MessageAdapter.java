@@ -14,9 +14,7 @@ import com.emma.chat.R;
 
 import java.util.List;
 
-/**
- * Created by emma on 17/5/17.
- */
+
 
 public class MessageAdapter extends BaseAdapter {
 

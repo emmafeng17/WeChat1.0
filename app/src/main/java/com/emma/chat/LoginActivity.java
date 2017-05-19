@@ -27,7 +27,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         txt_title = (TextView) findViewById(R.id.txt_title);
         txt_title.setText("登陆");
         img_back = (ImageView) findViewById(R.id.img_back);
-        // img_back.setVisibility(View.VISIBLE);
+        img_back.setVisibility(View.VISIBLE);
         btn_login = (Button) findViewById(R.id.btn_login);
         btn_register = (Button) findViewById(R.id.btn_qtlogin);
         et_usertel = (EditText) findViewById(R.id.et_usertel);
