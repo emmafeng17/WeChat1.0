@@ -1,8 +1,12 @@
 package com.emma.chat;
 
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +16,7 @@ import android.widget.TextView;
 import android.view.View.OnClickListener;
 
 import com.emma.chat.Adapter.AlbumAdpter;
+import com.emma.chat.Model.AlbumBean;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -24,7 +29,7 @@ public class AlbumActivity extends Activity  implements OnClickListener {
     private ImageView img_talk;
     private ListView mlistview;
     private View layout_head;
-    private List<String> listString=new LinkedList<String>();
+    private List<AlbumBean> listString=new LinkedList<AlbumBean>();
     AlbumAdpter adpter;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -82,7 +87,17 @@ public class AlbumActivity extends Activity  implements OnClickListener {
             case RES_SEND:
                 Bundle stringbundle=data.getBundleExtra("sharebundle");
                 String context=stringbundle.getString("textContext");
-                listString.add(0,context);
+                Uri uri=(Uri) stringbundle.getParcelable("bitmap");
+                ContentResolver cr = this.getContentResolver();
+                AlbumBean bean=null;
+                try {
+                    Bitmap bitmap = BitmapFactory.decodeStream(cr.openInputStream(uri));
+
+                    bean = new AlbumBean(context, bitmap);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                listString.add(0,bean);
                 Context mContext = AlbumActivity.this;
 //                AlbumAdpter mAdapter = new AlbumAdpter((LinkedList<String>) listString, mContext);
                 adpter.notifyDataSetChanged();

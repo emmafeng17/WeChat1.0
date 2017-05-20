@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.emma.chat.Model.AlbumBean;
 import com.emma.chat.R;
 
 import java.util.LinkedList;
@@ -18,11 +19,11 @@ import java.util.List;
  */
 
 public class AlbumAdpter extends BaseAdapter {
-    private List<String> mListData;
+    private List<AlbumBean> mListData;
     protected Context context;
     LayoutInflater mInflater;
 
-    public AlbumAdpter(List<String> mData, Context ctx) {
+    public AlbumAdpter(List<AlbumBean> mData, Context ctx) {
         context = ctx;
         mListData = mData;
     }
@@ -63,18 +64,13 @@ public class AlbumAdpter extends BaseAdapter {
             imageshare3.setImageResource(R.drawable.headself);
 
         } else {
+            AlbumBean bean=mListData.get(position);
 
-//
-//            imageshare1.setWillNotDraw(true);
-//            imageshare2.setWillNotDraw(true);
-//            imageshare3.setWillNotDraw(true);
-
-
-//            imageshare1.setVisibility(View.INVISIBLE);
-//            imageshare2.setVisibility(View.INVISIBLE);
-//            imageshare3.setVisibility(View.INVISIBLE);
             TextView textmsg = (TextView) convertView.findViewById(R.id.txt_msg);
-            textmsg.setText(mListData.get(position));
+            textmsg.setText(bean.getContent());
+            if (bean.getImage1()!=null){
+                imageshare1.setImageBitmap(bean.getImage1());
+            }
         }
 
         return convertView;

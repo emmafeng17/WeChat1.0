@@ -99,7 +99,7 @@
 				android:layout_below="@+id/layout_photo"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="56分钟前"
+				android:text="1分钟前"
 				android:textColor="@color/black1"
 				android:textSize="12sp"
 				android:singleLine="true" />
